@@ -1,0 +1,6 @@
+framework module MultiCollectionView {
+  umbrella header "MultiCollectionView-umbrella.h"
+
+  export *
+  module * { export * }
+}

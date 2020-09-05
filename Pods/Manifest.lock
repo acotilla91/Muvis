@@ -1,4 +1,6 @@
 PODS:
+  - ACAnimator (1.0.1)
+  - MultiCollectionView (1.0.2)
   - Nuke (8.4.1)
   - NVActivityIndicatorView (5.0.0):
     - NVActivityIndicatorView/Base (= 5.0.0)
@@ -7,6 +9,8 @@ PODS:
   - UICircularProgressRing (7.0.0)
 
 DEPENDENCIES:
+  - ACAnimator
+  - MultiCollectionView
   - Nuke
   - NVActivityIndicatorView
   - SwiftDate
@@ -14,17 +18,21 @@ DEPENDENCIES:
 
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
+    - ACAnimator
+    - MultiCollectionView
     - Nuke
     - NVActivityIndicatorView
     - SwiftDate
     - UICircularProgressRing
 
 SPEC CHECKSUMS:
+  ACAnimator: 5ebdf39455b2e1838746964fe01766876086bcbe
+  MultiCollectionView: 36b6a104d622324692c46bddb144788b017e99f8
   Nuke: d780e3507a86b86c589ab3cc5cd302d5456f06fb
   NVActivityIndicatorView: f109ed069924ac1b4adbc1ae9cfaeac0be1d6c2c
   SwiftDate: fa2bb3962056bb44047b4b85a30044e5eae30b03
   UICircularProgressRing: 738b48db0ec1fbbd8482d727979392bb8c272e8d
 
-PODFILE CHECKSUM: 008b74a5eb92878e18873d552cd2e649fb6a3b83
+PODFILE CHECKSUM: 3858e3117a644292970d8328674eaeaa18f3534f
 
 COCOAPODS: 1.8.4

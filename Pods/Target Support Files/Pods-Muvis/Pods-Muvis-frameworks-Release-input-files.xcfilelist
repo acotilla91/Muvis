@@ -1,4 +1,6 @@
 ${PODS_ROOT}/Target Support Files/Pods-Muvis/Pods-Muvis-frameworks.sh
+${BUILT_PRODUCTS_DIR}/ACAnimator/ACAnimator.framework
+${BUILT_PRODUCTS_DIR}/MultiCollectionView/MultiCollectionView.framework
 ${BUILT_PRODUCTS_DIR}/NVActivityIndicatorView/NVActivityIndicatorView.framework
 ${BUILT_PRODUCTS_DIR}/Nuke/Nuke.framework
 ${BUILT_PRODUCTS_DIR}/SwiftDate/SwiftDate.framework
