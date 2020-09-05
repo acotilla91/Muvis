@@ -31,6 +31,8 @@
 		0C9BCF9A2504175900F83EF5 /* ACPaginationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C9BCF8C2504175900F83EF5 /* ACPaginationView.swift */; };
 		0C9BCF9B2504175900F83EF5 /* ACProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C9BCF8D2504175900F83EF5 /* ACProgressView.swift */; };
 		0C9BCF9C2504175900F83EF5 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 0C9BCF8E2504175900F83EF5 /* README.md */; };
+		0C9BCFA025041EBC00F83EF5 /* NameDescribable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C9BCF9E25041EBC00F83EF5 /* NameDescribable.swift */; };
+		0C9BCFA125041EBC00F83EF5 /* UserScoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C9BCF9F25041EBC00F83EF5 /* UserScoreView.swift */; };
 		24A52DA2BBAAAFFD9F2AD281 /* Pods_Muvis.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52467709BE9B68837FC1F397 /* Pods_Muvis.framework */; };
 /* End PBXBuildFile section */
 
@@ -61,6 +63,8 @@
 		0C9BCF8C2504175900F83EF5 /* ACPaginationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ACPaginationView.swift; sourceTree = "<group>"; };
 		0C9BCF8D2504175900F83EF5 /* ACProgressView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ACProgressView.swift; sourceTree = "<group>"; };
 		0C9BCF8E2504175900F83EF5 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		0C9BCF9E25041EBC00F83EF5 /* NameDescribable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NameDescribable.swift; sourceTree = "<group>"; };
+		0C9BCF9F25041EBC00F83EF5 /* UserScoreView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserScoreView.swift; sourceTree = "<group>"; };
 		1A3A6F02D3AEA6094E61D422 /* Pods-Muvis.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Muvis.release.xcconfig"; path = "Target Support Files/Pods-Muvis/Pods-Muvis.release.xcconfig"; sourceTree = "<group>"; };
 		52467709BE9B68837FC1F397 /* Pods_Muvis.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Muvis.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6B1F07A1C7BFCD7AC49C8CE1 /* Pods-Muvis.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Muvis.debug.xcconfig"; path = "Target Support Files/Pods-Muvis/Pods-Muvis.debug.xcconfig"; sourceTree = "<group>"; };
@@ -106,6 +110,7 @@
 				0C9BCF64250404E400F83EF5 /* Main.storyboard */,
 				0C9BCF67250404E500F83EF5 /* Assets.xcassets */,
 				0C9BCF69250404E500F83EF5 /* LaunchScreen.storyboard */,
+				0C9BCF9D25041EBC00F83EF5 /* Utils */,
 				0C9BCF7C2504175900F83EF5 /* Dependencies */,
 				0C9BCF722504100A00F83EF5 /* Resources */,
 			);
@@ -182,6 +187,15 @@
 				0C9BCF8D2504175900F83EF5 /* ACProgressView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		0C9BCF9D25041EBC00F83EF5 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				0C9BCF9E25041EBC00F83EF5 /* NameDescribable.swift */,
+				0C9BCF9F25041EBC00F83EF5 /* UserScoreView.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 		9F19EC414241369BCAB28707 /* Frameworks */ = {
@@ -321,6 +335,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0C9BCFA025041EBC00F83EF5 /* NameDescribable.swift in Sources */,
 				0C9BCF962504175900F83EF5 /* UIlabel+ACExtensions.swift in Sources */,
 				0C9BCF972504175900F83EF5 /* UINavigationController+ACExtensions.swift in Sources */,
 				0C9BCF8F2504175900F83EF5 /* CGSize+ACExtensions.swift in Sources */,
@@ -330,6 +345,7 @@
 				0C9BCF912504175900F83EF5 /* Double+ACExtensions.swift in Sources */,
 				0C9BCF942504175900F83EF5 /* UIApplication+ACExtensions.swift in Sources */,
 				0C9BCF9A2504175900F83EF5 /* ACPaginationView.swift in Sources */,
+				0C9BCFA125041EBC00F83EF5 /* UserScoreView.swift in Sources */,
 				0C9BCF5F250404E400F83EF5 /* AppDelegate.swift in Sources */,
 				0C9BCF992504175900F83EF5 /* URLSession+ACExtensions.swift in Sources */,
 				0C9BCF61250404E400F83EF5 /* SceneDelegate.swift in Sources */,
