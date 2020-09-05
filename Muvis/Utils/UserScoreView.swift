@@ -8,6 +8,7 @@
 
 import UIKit
 import UICircularProgressRing
+import ACAnimator
 
 extension UICircularProgressRing {
     // https://stackoverflow.com/a/25943399/1792699
