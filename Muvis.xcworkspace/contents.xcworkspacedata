@@ -5,6 +5,9 @@
       location = "group:Podfile">
    </FileRef>
    <FileRef
+      location = "group:README.md">
+   </FileRef>
+   <FileRef
       location = "group:Muvis.xcodeproj">
    </FileRef>
    <FileRef
