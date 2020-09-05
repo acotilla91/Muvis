@@ -13,6 +13,7 @@
 		0C9BCF66250404E400F83EF5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0C9BCF64250404E400F83EF5 /* Main.storyboard */; };
 		0C9BCF68250404E500F83EF5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0C9BCF67250404E500F83EF5 /* Assets.xcassets */; };
 		0C9BCF6B250404E500F83EF5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0C9BCF69250404E500F83EF5 /* LaunchScreen.storyboard */; };
+		24A52DA2BBAAAFFD9F2AD281 /* Pods_Muvis.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52467709BE9B68837FC1F397 /* Pods_Muvis.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,9 @@
 		0C9BCF67250404E500F83EF5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0C9BCF6A250404E500F83EF5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0C9BCF6C250404E500F83EF5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1A3A6F02D3AEA6094E61D422 /* Pods-Muvis.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Muvis.release.xcconfig"; path = "Target Support Files/Pods-Muvis/Pods-Muvis.release.xcconfig"; sourceTree = "<group>"; };
+		52467709BE9B68837FC1F397 /* Pods_Muvis.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Muvis.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6B1F07A1C7BFCD7AC49C8CE1 /* Pods-Muvis.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Muvis.debug.xcconfig"; path = "Target Support Files/Pods-Muvis/Pods-Muvis.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +35,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				24A52DA2BBAAAFFD9F2AD281 /* Pods_Muvis.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +47,8 @@
 			children = (
 				0C9BCF5D250404E400F83EF5 /* Muvis */,
 				0C9BCF5C250404E400F83EF5 /* Products */,
+				D2810A8179E3B528D5BCB51D /* Pods */,
+				9F19EC414241369BCAB28707 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -67,6 +74,24 @@
 			path = Muvis;
 			sourceTree = "<group>";
 		};
+		9F19EC414241369BCAB28707 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				52467709BE9B68837FC1F397 /* Pods_Muvis.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D2810A8179E3B528D5BCB51D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6B1F07A1C7BFCD7AC49C8CE1 /* Pods-Muvis.debug.xcconfig */,
+				1A3A6F02D3AEA6094E61D422 /* Pods-Muvis.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -74,9 +99,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0C9BCF6F250404E500F83EF5 /* Build configuration list for PBXNativeTarget "Muvis" */;
 			buildPhases = (
+				EDAC71F4B6B0EEAF86EF3DFF /* [CP] Check Pods Manifest.lock */,
 				0C9BCF57250404E400F83EF5 /* Sources */,
 				0C9BCF58250404E400F83EF5 /* Frameworks */,
 				0C9BCF59250404E400F83EF5 /* Resources */,
+				EA8F955CC607B8CFFAD89865 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -132,6 +159,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		EA8F955CC607B8CFFAD89865 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Muvis/Pods-Muvis-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Muvis/Pods-Muvis-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Muvis/Pods-Muvis-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EDAC71F4B6B0EEAF86EF3DFF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Muvis-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		0C9BCF57250404E400F83EF5 /* Sources */ = {
@@ -282,6 +351,7 @@
 		};
 		0C9BCF70250404E500F83EF5 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6B1F07A1C7BFCD7AC49C8CE1 /* Pods-Muvis.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -300,6 +370,7 @@
 		};
 		0C9BCF71250404E500F83EF5 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1A3A6F02D3AEA6094E61D422 /* Pods-Muvis.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

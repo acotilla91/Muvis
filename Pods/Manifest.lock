@@ -1,0 +1,30 @@
+PODS:
+  - Nuke (8.4.1)
+  - NVActivityIndicatorView (5.0.0):
+    - NVActivityIndicatorView/Base (= 5.0.0)
+  - NVActivityIndicatorView/Base (5.0.0)
+  - SwiftDate (6.1.0)
+  - UICircularProgressRing (7.0.0)
+
+DEPENDENCIES:
+  - Nuke
+  - NVActivityIndicatorView
+  - SwiftDate
+  - UICircularProgressRing
+
+SPEC REPOS:
+  https://github.com/CocoaPods/Specs.git:
+    - Nuke
+    - NVActivityIndicatorView
+    - SwiftDate
+    - UICircularProgressRing
+
+SPEC CHECKSUMS:
+  Nuke: d780e3507a86b86c589ab3cc5cd302d5456f06fb
+  NVActivityIndicatorView: f109ed069924ac1b4adbc1ae9cfaeac0be1d6c2c
+  SwiftDate: fa2bb3962056bb44047b4b85a30044e5eae30b03
+  UICircularProgressRing: 738b48db0ec1fbbd8482d727979392bb8c272e8d
+
+PODFILE CHECKSUM: 008b74a5eb92878e18873d552cd2e649fb6a3b83
+
+COCOAPODS: 1.8.4
