@@ -66,3 +66,9 @@ fastlane/report.xml
 fastlane/Preview.html
 fastlane/screenshots/**/*.png
 fastlane/test_output
+
+# Backup folder to store other ignored files locally
+.backup/
+
+# Ignore all secrets (e.g. API keys)
+Muvis/Secrets/
