@@ -91,6 +91,21 @@ class HomeViewController: UIViewController, MultiCollectionViewDelegate, ACPagin
         setupCollectionViewMaskingGradient()
     }
     
+    // MARK: - Navigation -
+
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        super.prepare(for: segue, sender: sender)
+        guard
+            let movieDetailsVC = segue.destination as? MovieDetailsViewController,
+            let selectedIndexPath = collectionView.indexPathsForSelectedItems?[0]
+            else {
+                return
+        }
+        
+        let mediaItem = mediaCategories[selectedIndexPath.section].items[selectedIndexPath.item]
+        movieDetailsVC.mediaItem = mediaItem
+    }
+    
     // MARK: - UI Accessors -
 
     private(set) var focusedFeaturedItemIndex: Int! {
@@ -244,6 +259,10 @@ class HomeViewController: UIViewController, MultiCollectionViewDelegate, ACPagin
         }
         
         focusedFeaturedItemIndex = Int(targetContentOffset.pointee.x / collectionView.frame.width)
+    }
+    
+    func collectionView(_ collectionView: MultiCollectionView, didSelectItemAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "movieDetails", sender: self)
     }
         
     // MARK: - ACPaginationViewDelegate -

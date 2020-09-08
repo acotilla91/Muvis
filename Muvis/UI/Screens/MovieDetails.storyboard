@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="2co-o6-FvE">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Movie Details View Controller-->
+        <scene sceneID="WZE-XA-NIp">
+            <objects>
+                <viewController id="2co-o6-FvE" customClass="MovieDetailsViewController" customModule="Muvis" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" clipsSubviews="YES" contentMode="scaleToFill" id="pdQ-dL-mvM">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bqL-yf-W1m" customClass="MultiCollectionView" customModule="MultiCollectionView">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <view contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qsy-xN-5VS" userLabel="Hero Image View" customClass="ShadowImageView" customModule="Muvis" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="313.5"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <viewLayoutGuide key="safeArea" id="kT8-1H-IjV"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowRadiusOffSetPercentage">
+                                        <real key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowOffSetByX">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowOffSetByY">
+                                        <integer key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="imageCornerRaidus">
+                                        <integer key="value" value="0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowAlpha">
+                                        <integer key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="p6W-lT-IYB" customClass="GradientView" customModule="Muvis" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="192"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="192" id="1xm-dQ-a25"/>
+                                </constraints>
+                                <viewLayoutGuide key="safeArea" id="TiQ-ug-ESr"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="topColor">
+                                        <color key="value" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="bottomColor">
+                                        <color key="value" white="0.0" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="startPointX">
+                                        <real key="value" value="0.5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="startPointY">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="endPointX">
+                                        <real key="value" value="0.5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="endPointY">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <integer key="value" value="0"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.95686274509803915" green="0.95686274509803915" blue="0.95686274509803915" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Qsy-xN-5VS" firstAttribute="centerX" secondItem="w5m-E8-ISB" secondAttribute="centerX" id="3U1-hR-Tt6"/>
+                            <constraint firstItem="Qsy-xN-5VS" firstAttribute="top" secondItem="pdQ-dL-mvM" secondAttribute="top" id="4Qx-9d-cr8"/>
+                            <constraint firstItem="p6W-lT-IYB" firstAttribute="top" secondItem="pdQ-dL-mvM" secondAttribute="top" id="55d-2C-jx2"/>
+                            <constraint firstItem="bqL-yf-W1m" firstAttribute="top" secondItem="pdQ-dL-mvM" secondAttribute="top" id="7Ie-gN-7EM"/>
+                            <constraint firstAttribute="trailing" secondItem="p6W-lT-IYB" secondAttribute="trailing" id="C1f-L2-ggs"/>
+                            <constraint firstItem="Qsy-xN-5VS" firstAttribute="height" secondItem="pdQ-dL-mvM" secondAttribute="height" multiplier="0.35" id="LQd-ij-Ow7"/>
+                            <constraint firstAttribute="trailing" secondItem="bqL-yf-W1m" secondAttribute="trailing" id="Yb4-2R-TQf"/>
+                            <constraint firstItem="p6W-lT-IYB" firstAttribute="leading" secondItem="pdQ-dL-mvM" secondAttribute="leading" id="cnl-Lx-u4H"/>
+                            <constraint firstItem="Qsy-xN-5VS" firstAttribute="width" secondItem="pdQ-dL-mvM" secondAttribute="width" id="f7T-cj-iT0"/>
+                            <constraint firstAttribute="bottom" secondItem="bqL-yf-W1m" secondAttribute="bottom" id="tTP-HE-0z4"/>
+                            <constraint firstItem="bqL-yf-W1m" firstAttribute="leading" secondItem="pdQ-dL-mvM" secondAttribute="leading" id="vun-78-qWd"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="w5m-E8-ISB"/>
+                    </view>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <connections>
+                        <outlet property="collectionView" destination="bqL-yf-W1m" id="C8X-va-dGC"/>
+                        <outlet property="heroImageView" destination="Qsy-xN-5VS" id="Isw-lD-gEe"/>
+                        <outlet property="topGradientView" destination="p6W-lT-IYB" id="Zhg-2O-53e"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FPk-Yh-HCW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="117.59999999999999" y="-287.40629685157421"/>
+        </scene>
+    </scenes>
+</document>
