@@ -23,10 +23,10 @@ class TMDbAPIService: NSObject {
         static let movieDetails = "\(base)movie/<movie-id>?api_key=\(key)&append_to_response=releases,credits,videos"
         static let actorDetails = "\(base)person/<person-id>?api_key=\(key)&append_to_response=movie_credits"
         static let recommended = "\(base)movie/<movie-id>/recommendations?api_key=\(key)"
-        static let discover = "\(base)discover/movie?api_key=\(key)&language=en-US&with_original_language=en"
+        static let discover = "\(base)discover/movie?api_key=\(key)&region=US&language=en-US&with_original_language=en"
         
         // Using `primary_release_date.lte` to go back 3 months for better chance of the movies being released digitally and/or physically
-        static let discoverRipe = "\(base)discover/movie?api_key=\(key)&language=en-US&primary_release_date.lte=\((Date() - 3.months).toISO(.withFullDate))&with_original_language=en"
+        static let discoverRipe = "\(base)discover/movie?api_key=\(key)&region=US&language=en-US&primary_release_date.lte=\((Date() - 3.months).toISO(.withFullDate))&with_original_language=en"
         
         // For more details on images see: https://developers.themoviedb.org/3/getting-started/images
         static let imageBase = "http://image.tmdb.org/t/p/"
@@ -37,29 +37,29 @@ class TMDbAPIService: NSObject {
     }
     
     private var contentRows: [[String: String]] = [
-        // Popular movies (likely still in theaters)
-        ["Featured": "\(TMDbAPI.discover)&sort_by=popularity.desc&primary_release_date.gte=\((Date() - 3.months).toISO(.withFullDate))"],
+        // Popular movies (likely still in theaters or popular on streaming platforms)
+        ["Featured": "\(TMDbAPI.discover)&sort_by=popularity.desc&primary_release_date.gte=\((Date() - 3.months).toISO(.withFullDate))&vote_count.gte=500"],
 
         // Current popular movies (guaranteeing digital release)
         ["Popular": "\(TMDbAPI.discoverRipe)&sort_by=popularity.desc"],
 
         // Big hits in the last year based on revenue
-        ["Big Hits": "\(TMDbAPI.discoverRipe)&region=US&sort_by=revenue.desc&primary_release_date.gte=\((Date() - 1.years).toISO(.withFullDate))&vote_count.gte=500"],
+        ["Big Hits": "\(TMDbAPI.discoverRipe)&sort_by=revenue.desc&primary_release_date.gte=\((Date() - 1.years).toISO(.withFullDate))&vote_count.gte=500"],
 
         // Fan favorite movies in the last 2 years based on votes
-        ["Fan Favorite": "\(TMDbAPI.discoverRipe)&region=US&sort_by=vote_average.desc&vote_count.gte=1000&primary_release_date.gte=\((Date() - 2.years).toISO(.withFullDate))"],
+        ["Fan Favorite": "\(TMDbAPI.discoverRipe)&sort_by=vote_average.desc&vote_count.gte=1000&primary_release_date.gte=\((Date() - 2.years).toISO(.withFullDate))"],
 
         // Most popular comedies in the last 9 years (excludes movies with the genres: "Adventure", "Animated", "History", "Music", "Fantasy", "Science Fiction" and "Thriller")
-        ["Comedies": "\(TMDbAPI.discoverRipe)&region=US&sort_by=popularity.desc&primary_release_date.gte=\((Date() - 9.years).toISO(.withFullDate))&vote_count.gte=500&with_genres=35&without_genres=12,16,36,53,10402,878,14"],
+        ["Comedies": "\(TMDbAPI.discoverRipe)&sort_by=popularity.desc&primary_release_date.gte=\((Date() - 9.years).toISO(.withFullDate))&vote_count.gte=500&with_genres=35&without_genres=12,16,36,53,10402,878,14"],
 
         // Most popular action and adventure movies in the last 5 years that are not comedies or animated movies
-        ["Action & Adventure": "\(TMDbAPI.discoverRipe)&region=US&sort_by=popularity.desc&primary_release_date.gte=\((Date() - 5.years).toISO(.withFullDate))&vote_count.gte=500&with_genres=28,12&without_genres=16,35"],
+        ["Action & Adventure": "\(TMDbAPI.discoverRipe)&sort_by=popularity.desc&primary_release_date.gte=\((Date() - 5.years).toISO(.withFullDate))&vote_count.gte=500&with_genres=28,12&without_genres=16,35"],
 
         // Most popular animated movies of the last 10 years with max rating of PG
-        ["Animated": "\(TMDbAPI.discoverRipe)&region=US&sort_by=popularity.desc&certification_country=US&certification.lte=PG&primary_release_date.gte=\((Date() - 10.years).toISO(.withFullDate))&vote_count.gte=200&with_genres=16"],
+        ["Animated": "\(TMDbAPI.discoverRipe)&sort_by=popularity.desc&certification_country=US&certification.lte=PG&primary_release_date.gte=\((Date() - 10.years).toISO(.withFullDate))&vote_count.gte=200&with_genres=16"],
 
         // Most popular dramas in the last 3 years
-        ["Drama": "\(TMDbAPI.discoverRipe)&region=US&sort_by=popularity.desc&primary_release_date.gte=\((Date() - 3.years).toISO(.withFullDate))&vote_count.gte=500&with_genres=18&without_genres=16,35,12,28"]
+        ["Drama": "\(TMDbAPI.discoverRipe)&sort_by=popularity.desc&primary_release_date.gte=\((Date() - 3.years).toISO(.withFullDate))&vote_count.gte=500&with_genres=18&without_genres=16,35,12,28"]
     ]
     
     // MARK: - TMDb API Requests -
