@@ -243,9 +243,42 @@
 			children = (
 				0C9BCF69250404E500F83EF5 /* LaunchScreen.storyboard */,
 				0C9BCF64250404E400F83EF5 /* Main.storyboard */,
-				0C9BCF62250404E400F83EF5 /* HomeViewController.swift */,
+				0CE3C075250707BB002D918A /* Screens */,
+				0CE3C078250707EB002D918A /* Cells */,
+				0CE3C077250707E5002D918A /* Footers */,
+				0CE3C076250707DD002D918A /* Headers */,
 			);
 			path = UI;
+			sourceTree = "<group>";
+		};
+		0CE3C075250707BB002D918A /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				0C9BCF62250404E400F83EF5 /* HomeViewController.swift */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		0CE3C076250707DD002D918A /* Headers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Headers;
+			sourceTree = "<group>";
+		};
+		0CE3C077250707E5002D918A /* Footers */ = {
+			isa = PBXGroup;
+			children = (
+				0CE3C07925070824002D918A /* PaginationFooterView.swift */,
+			);
+			path = Footers;
+			sourceTree = "<group>";
+		};
+		0CE3C078250707EB002D918A /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		9F19EC414241369BCAB28707 /* Frameworks */ = {
