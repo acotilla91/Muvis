@@ -304,8 +304,8 @@ class MovieDetailsViewController: UIViewController, MultiCollectionViewDelegate,
     func collectionView(_ collectionView: MultiCollectionView, didSelectItemAt indexPath: IndexPath) {
         switch indexPath.section {
         case clipsSection:
-            // TODO: clipsSection
-            break
+            let clipItem = mediaItem.clips[indexPath.item]
+            PlaybackCoordinator.shared.attemptPlayback(for: clipItem)
         case actorsSection:
             // TODO: actorsSection
             break
@@ -472,7 +472,7 @@ class MovieDetailsViewController: UIViewController, MultiCollectionViewDelegate,
     // MARK: - MediaActionsViewDelegate -
     
     func actionsViewDidSelectPlayButton(_ actionsView: MediaActionsView) {
-        // TODO: actionsViewDidSelectPlayButton
+        PlaybackCoordinator.shared.attemptPlayback(for: mediaItem)
     }
     
     func actionsViewDidSelectAddButton(_ actionsView: MediaActionsView) {
