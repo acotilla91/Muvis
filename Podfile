@@ -9,4 +9,5 @@ target 'Muvis' do
     pod 'UICircularProgressRing'
     pod 'ACAnimator'
     pod 'MultiCollectionView'
+    pod 'YoutubeDirectLinkExtractor'
 end

@@ -1,0 +1,6 @@
+framework module YoutubeDirectLinkExtractor {
+  umbrella header "YoutubeDirectLinkExtractor-umbrella.h"
+
+  export *
+  module * { export * }
+}

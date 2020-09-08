@@ -5,3 +5,4 @@ ${BUILT_PRODUCTS_DIR}/NVActivityIndicatorView/NVActivityIndicatorView.framework
 ${BUILT_PRODUCTS_DIR}/Nuke/Nuke.framework
 ${BUILT_PRODUCTS_DIR}/SwiftDate/SwiftDate.framework
 ${BUILT_PRODUCTS_DIR}/UICircularProgressRing/UICircularProgressRing.framework
+${BUILT_PRODUCTS_DIR}/YoutubeDirectLinkExtractor/YoutubeDirectLinkExtractor.framework
