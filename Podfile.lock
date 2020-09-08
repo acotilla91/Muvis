@@ -5,6 +5,7 @@ PODS:
   - NVActivityIndicatorView (5.0.0):
     - NVActivityIndicatorView/Base (= 5.0.0)
   - NVActivityIndicatorView/Base (5.0.0)
+  - ShowTime (2.5.2)
   - SwiftDate (6.1.0)
   - UICircularProgressRing (7.0.0)
   - YoutubeDirectLinkExtractor (0.3.1)
@@ -14,6 +15,7 @@ DEPENDENCIES:
   - MultiCollectionView
   - Nuke
   - NVActivityIndicatorView
+  - ShowTime
   - SwiftDate
   - UICircularProgressRing
   - YoutubeDirectLinkExtractor
@@ -24,6 +26,7 @@ SPEC REPOS:
     - MultiCollectionView
     - Nuke
     - NVActivityIndicatorView
+    - ShowTime
     - SwiftDate
     - UICircularProgressRing
     - YoutubeDirectLinkExtractor
@@ -33,10 +36,11 @@ SPEC CHECKSUMS:
   MultiCollectionView: 36b6a104d622324692c46bddb144788b017e99f8
   Nuke: d780e3507a86b86c589ab3cc5cd302d5456f06fb
   NVActivityIndicatorView: f109ed069924ac1b4adbc1ae9cfaeac0be1d6c2c
+  ShowTime: 5cb2c5314da2983cec44f27123a15473cf29306f
   SwiftDate: fa2bb3962056bb44047b4b85a30044e5eae30b03
   UICircularProgressRing: 738b48db0ec1fbbd8482d727979392bb8c272e8d
   YoutubeDirectLinkExtractor: de7abd36c0e3bb120b9b372f36450fbf9b51c01e
 
-PODFILE CHECKSUM: 35229f7ecfc07e20f360f87c4925e3ce6accf23f
+PODFILE CHECKSUM: d5bfe0a571c22cd0b7bc26332f45a964466c137d
 
 COCOAPODS: 1.8.4

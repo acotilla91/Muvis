@@ -10,4 +10,5 @@ target 'Muvis' do
     pod 'ACAnimator'
     pod 'MultiCollectionView'
     pod 'YoutubeDirectLinkExtractor'
+    pod 'ShowTime'
 end
