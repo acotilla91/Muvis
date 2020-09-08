@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  HomeViewController.swift
 //  Muvis
 //
 //  Created by Alejandro Cotilla on 9/5/20.
@@ -9,7 +9,7 @@
 import UIKit
 import NVActivityIndicatorView
 
-class ViewController: UIViewController {
+class HomeViewController: UIViewController {
     
     private var activityIndicator: NVActivityIndicatorView!
     
