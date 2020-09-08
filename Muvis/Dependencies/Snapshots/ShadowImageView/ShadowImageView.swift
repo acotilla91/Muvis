@@ -224,7 +224,7 @@ public class ShadowImageView: ImageDisplayingView {
     }
     
     // Conform ImageDisplaying protocol from Nuke
-    public func display(image: Image?) {
+    public func nuke_display(image: PlatformImage?) {
         self.image = image
     }
 }
