@@ -1,3 +1,3 @@
-[submodule "Dependencies/ACCore"]
-	path = Dependencies/ACCore
+[submodule "Muvis/Dependencies/Submodules/ACCore"]
+	path = Muvis/Dependencies/Submodules/ACCore
 	url = git@github.com:acotilla91/ACCore.git
