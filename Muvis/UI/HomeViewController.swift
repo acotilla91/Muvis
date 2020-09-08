@@ -8,12 +8,15 @@
 
 import UIKit
 import NVActivityIndicatorView
+import MultiCollectionView
 
 class HomeViewController: UIViewController {
     
     private var activityIndicator: NVActivityIndicatorView!
     
     private var mediaCategories: [MediaCategory] = []
+    
+    @IBOutlet weak var collectionView: MultiCollectionView!
     
     // MARK: - UI Setup -
 
