@@ -119,9 +119,8 @@
 				0C9BCF5E250404E400F83EF5 /* AppDelegate.swift */,
 				0C9BCF60250404E400F83EF5 /* SceneDelegate.swift */,
 				0C9BCF62250404E400F83EF5 /* ViewController.swift */,
-				0C9BCF64250404E400F83EF5 /* Main.storyboard */,
 				0C9BCF67250404E500F83EF5 /* Assets.xcassets */,
-				0C9BCF69250404E500F83EF5 /* LaunchScreen.storyboard */,
+				0C9BCFBD2506FF4B00F83EF5 /* UI */,
 				0C9BCFBA25059C5400F83EF5 /* Services */,
 				0C9BCFAC2504205E00F83EF5 /* Models */,
 				0C9BCF9D25041EBC00F83EF5 /* Utils */,
@@ -238,6 +237,15 @@
 				0C9BCFBB25059C8000F83EF5 /* TMDbAPIService.swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		0C9BCFBD2506FF4B00F83EF5 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				0C9BCF64250404E400F83EF5 /* Main.storyboard */,
+				0C9BCF69250404E500F83EF5 /* LaunchScreen.storyboard */,
+			);
+			path = UI;
 			sourceTree = "<group>";
 		};
 		9F19EC414241369BCAB28707 /* Frameworks */ = {
