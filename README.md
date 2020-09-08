@@ -16,3 +16,17 @@ To run the demo app, you first need to obtain an API key from your TMDb account 
 
 * General UI: https://dribbble.com/shots/5026483
 * Icon: https://dribbble.com/shots/5416898-Playbox-Icon
+
+## Libraries
+
+* [MultiCollectionView](https://github.com/acotilla91/MultiCollectionView)
+* [ACAnimator](https://github.com/acotilla91/ACAnimator)
+* [ACCore](https://github.com/acotilla91/ACCore)
+* [Nuke](https://github.com/kean/Nuke)
+* [NVActivityIndicatorView](https://github.com/ninjaprox/NVActivityIndicatorView)
+* [UICircularProgressRing](https://github.com/luispadron/UICircularProgressRing)
+* [SwiftDate](https://github.com/malcommac/SwiftDate)
+* [YoutubeDirectLinkExtractor](https://github.com/devandsev/YoutubeDirectLinkExtractor)
+* [ShowTime](https://github.com/KaneCheshire/ShowTime)
+* [GradientView](https://github.com/matvdg/Gradient-View)
+* [ShadowImageView](https://github.com/olddonkey/ShadowImageView)
