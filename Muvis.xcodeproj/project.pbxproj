@@ -39,6 +39,8 @@
 		0CE3C0B625070C95002D918A /* URLSession+ACExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CE3C0A825070C95002D918A /* URLSession+ACExtensions.swift */; };
 		0CE3C0B725070C95002D918A /* ACPaginationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CE3C0AA25070C95002D918A /* ACPaginationView.swift */; };
 		0CE3C0B825070C95002D918A /* ACProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CE3C0AB25070C95002D918A /* ACProgressView.swift */; };
+		0CE3C0BE25070CBF002D918A /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CE3C0BB25070CBF002D918A /* GradientView.swift */; };
+		0CE3C0BF25070CBF002D918A /* ShadowImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CE3C0BD25070CBF002D918A /* ShadowImageView.swift */; };
 		24A52DA2BBAAAFFD9F2AD281 /* Pods_Muvis.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52467709BE9B68837FC1F397 /* Pods_Muvis.framework */; };
 /* End PBXBuildFile section */
 
@@ -77,6 +79,8 @@
 		0CE3C0A825070C95002D918A /* URLSession+ACExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "URLSession+ACExtensions.swift"; sourceTree = "<group>"; };
 		0CE3C0AA25070C95002D918A /* ACPaginationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ACPaginationView.swift; sourceTree = "<group>"; };
 		0CE3C0AB25070C95002D918A /* ACProgressView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ACProgressView.swift; sourceTree = "<group>"; };
+		0CE3C0BB25070CBF002D918A /* GradientView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
+		0CE3C0BD25070CBF002D918A /* ShadowImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShadowImageView.swift; sourceTree = "<group>"; };
 		1A3A6F02D3AEA6094E61D422 /* Pods-Muvis.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Muvis.release.xcconfig"; path = "Target Support Files/Pods-Muvis/Pods-Muvis.release.xcconfig"; sourceTree = "<group>"; };
 		52467709BE9B68837FC1F397 /* Pods_Muvis.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Muvis.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6B1F07A1C7BFCD7AC49C8CE1 /* Pods-Muvis.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Muvis.debug.xcconfig"; path = "Target Support Files/Pods-Muvis/Pods-Muvis.debug.xcconfig"; sourceTree = "<group>"; };
@@ -133,6 +137,7 @@
 		0C9BCF7C2504175900F83EF5 /* Dependencies */ = {
 			isa = PBXGroup;
 			children = (
+				0CE3C0B925070CBF002D918A /* Snapshots */,
 				0CE3C07B25070C2D002D918A /* Submodules */,
 			);
 			path = Dependencies;
@@ -282,6 +287,32 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		0CE3C0B925070CBF002D918A /* Snapshots */ = {
+			isa = PBXGroup;
+			children = (
+				0CE3C0BA25070CBF002D918A /* GradientView */,
+				0CE3C0BC25070CBF002D918A /* ShadowImageView */,
+			);
+			name = Snapshots;
+			path = Muvis/Dependencies/Snapshots;
+			sourceTree = SOURCE_ROOT;
+		};
+		0CE3C0BA25070CBF002D918A /* GradientView */ = {
+			isa = PBXGroup;
+			children = (
+				0CE3C0BB25070CBF002D918A /* GradientView.swift */,
+			);
+			path = GradientView;
+			sourceTree = "<group>";
+		};
+		0CE3C0BC25070CBF002D918A /* ShadowImageView */ = {
+			isa = PBXGroup;
+			children = (
+				0CE3C0BD25070CBF002D918A /* ShadowImageView.swift */,
+			);
+			path = ShadowImageView;
+			sourceTree = "<group>";
+		};
 		9F19EC414241369BCAB28707 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -419,6 +450,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0CE3C0BF25070CBF002D918A /* ShadowImageView.swift in Sources */,
 				0CE3C0AE25070C95002D918A /* Double+ACExtensions.swift in Sources */,
 				0CE3C0B425070C95002D918A /* UINavigationController+ACExtensions.swift in Sources */,
 				0C9BCFB32504205E00F83EF5 /* MediaCategory.swift in Sources */,
@@ -441,6 +473,7 @@
 				0C9BCF61250404E400F83EF5 /* SceneDelegate.swift in Sources */,
 				0CE3C0AF25070C95002D918A /* Int+ACExtensions.swift in Sources */,
 				0CE3C0B325070C95002D918A /* UIlabel+ACExtensions.swift in Sources */,
+				0CE3C0BE25070CBF002D918A /* GradientView.swift in Sources */,
 				0CE3C0B625070C95002D918A /* URLSession+ACExtensions.swift in Sources */,
 				0C9BCFB62504205E00F83EF5 /* YouTubeItem.swift in Sources */,
 			);
