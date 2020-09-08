@@ -47,11 +47,22 @@
                     <navigationItem key="navigationItem" id="Cek-cZ-0Bu"/>
                     <connections>
                         <outlet property="collectionView" destination="584-SE-oCD" id="6k4-W6-K7G"/>
+                        <segue destination="6vr-6O-cEP" kind="show" identifier="movieDetails" id="anh-aq-pcT"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-568" y="-90"/>
+        </scene>
+        <!--MovieDetails-->
+        <scene sceneID="aix-Xy-mJc">
+            <objects>
+                <viewControllerPlaceholder storyboardName="MovieDetails" id="6vr-6O-cEP" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="6IK-ew-7rm"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ppc-hV-e5h" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="89" y="-90"/>
         </scene>
     </scenes>
 </document>
