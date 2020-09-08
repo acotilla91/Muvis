@@ -2,6 +2,8 @@
 
 iOS movies concept app that demonstrates how to integrate The Movie Database API.
 
+![Demo](https://github.com/acotilla91/Muvis/blob/master/muvis_demo_optim.gif)
+
 ## Running Demo
 
 To run the demo app, you first need to obtain an API key from your TMDb account and then place it in the project:
