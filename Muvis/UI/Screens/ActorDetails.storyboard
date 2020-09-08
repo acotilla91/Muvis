@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="IIo-VD-oKU">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Nunito-Black.ttf">
+            <string>Nunito-Black</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Actor Details View Controller-->
+        <scene sceneID="TQr-pW-Eui">
+            <objects>
+                <viewController id="IIo-VD-oKU" customClass="ActorDetailsViewController" customModule="Muvis" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="EGg-rA-Ieb">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UqJ-1W-joo">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <subviews>
+                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="UfD-4M-IDp">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="g9j-KW-SvG">
+                                            <size key="itemSize" width="50" height="50"/>
+                                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        </collectionViewFlowLayout>
+                                        <cells>
+                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="PosterCellView" id="aEC-AD-4tA">
+                                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                                    <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                </view>
+                                            </collectionViewCell>
+                                        </cells>
+                                    </collectionView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="UfD-4M-IDp" secondAttribute="trailing" id="Zqc-cm-Omf"/>
+                                    <constraint firstItem="UfD-4M-IDp" firstAttribute="leading" secondItem="UqJ-1W-joo" secondAttribute="leading" id="fEs-or-iYB"/>
+                                    <constraint firstAttribute="bottom" secondItem="UfD-4M-IDp" secondAttribute="bottom" id="o1e-0x-1WL"/>
+                                    <constraint firstItem="UfD-4M-IDp" firstAttribute="top" secondItem="UqJ-1W-joo" secondAttribute="top" id="u2O-Ie-Nft"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="qRc-iG-lT0" customClass="ShadowImageView" customModule="Muvis" customModuleProvider="target">
+                                <rect key="frame" x="83" y="50" width="248" height="248.5"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="400" id="RfE-VT-dyM"/>
+                                    <constraint firstAttribute="width" secondItem="qRc-iG-lT0" secondAttribute="height" multiplier="1:1" id="y4I-g0-idJ"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowRadiusOffSetPercentage">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowOffSetByX">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowOffSetByY">
+                                        <real key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowAlpha">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="blurRadius">
+                                        <real key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ROSA SALAZAR" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="91l-Q1-u5H">
+                                <rect key="frame" x="70.5" y="316.5" width="273" height="30.5"/>
+                                <fontDescription key="fontDescription" name="Nunito-Black" family="Nunito" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.95686274509803915" green="0.95686274509803915" blue="0.95686274509803915" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="UqJ-1W-joo" secondAttribute="trailing" id="Epw-HI-gQ2"/>
+                            <constraint firstItem="91l-Q1-u5H" firstAttribute="width" secondItem="qRc-iG-lT0" secondAttribute="width" multiplier="1.1" id="MoB-fg-onk"/>
+                            <constraint firstItem="qRc-iG-lT0" firstAttribute="centerX" secondItem="fYK-YF-Gtt" secondAttribute="centerX" id="OPg-bZ-z5P"/>
+                            <constraint firstItem="91l-Q1-u5H" firstAttribute="centerX" secondItem="qRc-iG-lT0" secondAttribute="centerX" id="OqS-qV-84a"/>
+                            <constraint firstItem="qRc-iG-lT0" firstAttribute="top" secondItem="EGg-rA-Ieb" secondAttribute="top" constant="50" id="RPA-b0-T77"/>
+                            <constraint firstAttribute="bottom" secondItem="UqJ-1W-joo" secondAttribute="bottom" id="ZRc-3c-594"/>
+                            <constraint firstItem="UqJ-1W-joo" firstAttribute="leading" secondItem="EGg-rA-Ieb" secondAttribute="leading" id="gRY-jC-4bB"/>
+                            <constraint firstItem="91l-Q1-u5H" firstAttribute="top" secondItem="qRc-iG-lT0" secondAttribute="bottom" constant="18" id="v48-WK-YNy"/>
+                            <constraint firstItem="UqJ-1W-joo" firstAttribute="top" secondItem="EGg-rA-Ieb" secondAttribute="top" id="y8o-mZ-9L3"/>
+                            <constraint firstItem="qRc-iG-lT0" firstAttribute="width" secondItem="EGg-rA-Ieb" secondAttribute="width" multiplier="0.6" priority="750" id="zbN-MH-Zcx"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="fYK-YF-Gtt"/>
+                    </view>
+                    <connections>
+                        <outlet property="actorImageView" destination="qRc-iG-lT0" id="bEB-h3-279"/>
+                        <outlet property="actorNameLabel" destination="91l-Q1-u5H" id="376-nT-ydO"/>
+                        <outlet property="collectionView" destination="UfD-4M-IDp" id="f7k-Mf-LFk"/>
+                        <outlet property="collectionViewContainer" destination="UqJ-1W-joo" id="ib3-wW-j7S"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lSl-14-nQF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-136.23188405797103" y="131.91964285714286"/>
+        </scene>
+    </scenes>
+</document>

@@ -61,6 +61,8 @@
 		0CE3C0E52507179D002D918A /* MediaActionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CE3C0E32507179D002D918A /* MediaActionsView.swift */; };
 		0CE3C0E62507179D002D918A /* MediaActionsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0CE3C0E42507179D002D918A /* MediaActionsView.xib */; };
 		0CE3C0E825072EBA002D918A /* PlaybackCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CE3C0E725072EBA002D918A /* PlaybackCoordinator.swift */; };
+		0CE3C0EB25073F50002D918A /* ActorDetails.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0CE3C0E925073F50002D918A /* ActorDetails.storyboard */; };
+		0CE3C0EC25073F50002D918A /* ActorDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CE3C0EA25073F50002D918A /* ActorDetailsViewController.swift */; };
 		24A52DA2BBAAAFFD9F2AD281 /* Pods_Muvis.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52467709BE9B68837FC1F397 /* Pods_Muvis.framework */; };
 /* End PBXBuildFile section */
 
@@ -121,6 +123,8 @@
 		0CE3C0E32507179D002D918A /* MediaActionsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MediaActionsView.swift; sourceTree = "<group>"; };
 		0CE3C0E42507179D002D918A /* MediaActionsView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MediaActionsView.xib; sourceTree = "<group>"; };
 		0CE3C0E725072EBA002D918A /* PlaybackCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaybackCoordinator.swift; sourceTree = "<group>"; };
+		0CE3C0E925073F50002D918A /* ActorDetails.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ActorDetails.storyboard; sourceTree = "<group>"; };
+		0CE3C0EA25073F50002D918A /* ActorDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActorDetailsViewController.swift; sourceTree = "<group>"; };
 		1A3A6F02D3AEA6094E61D422 /* Pods-Muvis.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Muvis.release.xcconfig"; path = "Target Support Files/Pods-Muvis/Pods-Muvis.release.xcconfig"; sourceTree = "<group>"; };
 		52467709BE9B68837FC1F397 /* Pods_Muvis.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Muvis.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6B1F07A1C7BFCD7AC49C8CE1 /* Pods-Muvis.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Muvis.debug.xcconfig"; path = "Target Support Files/Pods-Muvis/Pods-Muvis.debug.xcconfig"; sourceTree = "<group>"; };
@@ -259,6 +263,8 @@
 				0C9BCF62250404E400F83EF5 /* HomeViewController.swift */,
 				0CE3C0CE250716C3002D918A /* MovieDetails.storyboard */,
 				0CE3C0CF250716C3002D918A /* MovieDetailsViewController.swift */,
+				0CE3C0E925073F50002D918A /* ActorDetails.storyboard */,
+				0CE3C0EA25073F50002D918A /* ActorDetailsViewController.swift */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -463,6 +469,7 @@
 				0C9BCFAB25041F4400F83EF5 /* Nunito-SemiBold.ttf in Resources */,
 				0C9BCF6B250404E500F83EF5 /* LaunchScreen.storyboard in Resources */,
 				0C9BCFA825041F4400F83EF5 /* Nunito-Black.ttf in Resources */,
+				0CE3C0EB25073F50002D918A /* ActorDetails.storyboard in Resources */,
 				0CE3C0E62507179D002D918A /* MediaActionsView.xib in Resources */,
 				0CE3C0CD25070DD4002D918A /* MediaHeaderView.xib in Resources */,
 				0CE3C0E125071770002D918A /* MovieMetadataCellView.xib in Resources */,
@@ -545,6 +552,7 @@
 				0CE3C0C525070D8D002D918A /* MediaCellView.swift in Sources */,
 				0CE3C0E025071770002D918A /* CircularCellView.swift in Sources */,
 				0C9BCFBC25059C8000F83EF5 /* TMDbAPIService.swift in Sources */,
+				0CE3C0EC25073F50002D918A /* ActorDetailsViewController.swift in Sources */,
 				0CE3C0AD25070C95002D918A /* Color+ACExtensions.swift in Sources */,
 				0CE3C0C825070D8D002D918A /* PosterCellView.swift in Sources */,
 				0C9BCFB42504205E00F83EF5 /* MediaItem.swift in Sources */,
