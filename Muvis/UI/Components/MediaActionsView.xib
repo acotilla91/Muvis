@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Nunito-Black.ttf">
+            <string>Nunito-Black</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="HMu-Sp-MhL" customClass="MediaActionsView" customModule="Muvis" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="583" height="172"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Vl-tL-HUG">
+                    <rect key="frame" x="506" y="64" width="42" height="42"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="42" id="Q62-50-AcU"/>
+                        <constraint firstAttribute="height" constant="42" id="tPr-y2-dtI"/>
+                    </constraints>
+                    <state key="normal" image="download-arrow"/>
+                    <connections>
+                        <action selector="downloadButtonSelected:" destination="HMu-Sp-MhL" eventType="touchUpInside" id="S9r-xB-NcE"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4mg-tj-EI1">
+                    <rect key="frame" x="35" y="64" width="42" height="42"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="42" id="iWI-n4-tgl"/>
+                        <constraint firstAttribute="height" constant="42" id="osv-4N-tTW"/>
+                    </constraints>
+                    <state key="normal" image="add-icon"/>
+                    <connections>
+                        <action selector="addButtonSelected:" destination="HMu-Sp-MhL" eventType="touchUpInside" id="lkr-ag-wbb"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y7h-8h-n3c">
+                    <rect key="frame" x="254.5" y="0.0" width="74" height="74"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="74" id="R2I-OG-dJx"/>
+                        <constraint firstAttribute="width" constant="74" id="cQr-rj-OKv"/>
+                    </constraints>
+                    <connections>
+                        <action selector="playButtonSelected:" destination="HMu-Sp-MhL" eventType="touchUpInside" id="nuZ-Hs-quF"/>
+                    </connections>
+                </button>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.69999999999999996" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="play-icon-shadow" translatesAutoresizingMaskIntoConstraints="NO" id="kex-53-GWO" userLabel="Play Image View Background">
+                    <rect key="frame" x="275.5" y="18.5" width="37" height="37"/>
+                    <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </imageView>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="play-icon" translatesAutoresizingMaskIntoConstraints="NO" id="eRU-Wo-PCq" userLabel="Play Image View">
+                    <rect key="frame" x="275.5" y="18.5" width="37" height="37"/>
+                    <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="THE NUTCRACKER AND THE FOUR REALMS" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fle-a5-QYA">
+                    <rect key="frame" x="67" y="110" width="449" height="60.5"/>
+                    <fontDescription key="fontDescription" name="Nunito-Black" family="Nunito" pointSize="22"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="Fle-a5-QYA" firstAttribute="top" secondItem="HMu-Sp-MhL" secondAttribute="top" constant="110" id="297-5d-aM2"/>
+                <constraint firstItem="8Vl-tL-HUG" firstAttribute="top" secondItem="y7h-8h-n3c" secondAttribute="bottom" constant="-10" id="6fd-fz-kVY"/>
+                <constraint firstItem="4mg-tj-EI1" firstAttribute="leading" secondItem="95t-5E-uCu" secondAttribute="leading" constant="35" id="E0U-I8-D6z"/>
+                <constraint firstItem="eRU-Wo-PCq" firstAttribute="width" secondItem="y7h-8h-n3c" secondAttribute="width" multiplier="0.5" id="JGG-KL-eza"/>
+                <constraint firstItem="kex-53-GWO" firstAttribute="height" secondItem="y7h-8h-n3c" secondAttribute="height" multiplier="0.5" id="JJa-he-Xib"/>
+                <constraint firstItem="eRU-Wo-PCq" firstAttribute="centerY" secondItem="y7h-8h-n3c" secondAttribute="centerY" id="L8z-J7-75w"/>
+                <constraint firstItem="kex-53-GWO" firstAttribute="centerX" secondItem="y7h-8h-n3c" secondAttribute="centerX" multiplier="1.008" id="Pdb-Rt-cBE"/>
+                <constraint firstAttribute="trailing" secondItem="Fle-a5-QYA" secondAttribute="trailing" constant="67" id="Pfo-kh-td7"/>
+                <constraint firstItem="eRU-Wo-PCq" firstAttribute="height" secondItem="y7h-8h-n3c" secondAttribute="height" multiplier="0.5" id="UTE-RD-ZZe"/>
+                <constraint firstItem="kex-53-GWO" firstAttribute="width" secondItem="y7h-8h-n3c" secondAttribute="width" multiplier="0.5" id="UmM-u9-O5P"/>
+                <constraint firstItem="y7h-8h-n3c" firstAttribute="centerX" secondItem="95t-5E-uCu" secondAttribute="centerX" id="b2Z-a0-vSQ"/>
+                <constraint firstItem="4mg-tj-EI1" firstAttribute="top" secondItem="y7h-8h-n3c" secondAttribute="bottom" constant="-10" id="b41-FW-XlG"/>
+                <constraint firstItem="95t-5E-uCu" firstAttribute="trailing" secondItem="8Vl-tL-HUG" secondAttribute="trailing" constant="35" id="cMC-Tr-Lei"/>
+                <constraint firstItem="y7h-8h-n3c" firstAttribute="top" secondItem="HMu-Sp-MhL" secondAttribute="top" id="lic-qz-BaW"/>
+                <constraint firstItem="Fle-a5-QYA" firstAttribute="leading" secondItem="HMu-Sp-MhL" secondAttribute="leading" constant="67" id="pkw-1I-Dlf"/>
+                <constraint firstItem="kex-53-GWO" firstAttribute="centerY" secondItem="y7h-8h-n3c" secondAttribute="centerY" id="wrQ-De-kcZ"/>
+                <constraint firstItem="eRU-Wo-PCq" firstAttribute="centerX" secondItem="y7h-8h-n3c" secondAttribute="centerX" multiplier="1.008" id="zVd-fE-Gdw"/>
+            </constraints>
+            <nil key="simulatedTopBarMetrics"/>
+            <nil key="simulatedBottomBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="95t-5E-uCu"/>
+            <connections>
+                <outlet property="addButton" destination="4mg-tj-EI1" id="O3D-RE-VcL"/>
+                <outlet property="downloadButton" destination="8Vl-tL-HUG" id="2pI-px-6A1"/>
+                <outlet property="playButton" destination="y7h-8h-n3c" id="5B1-x1-jHB"/>
+                <outlet property="playButtonHeightConstraint" destination="R2I-OG-dJx" id="rmC-X9-WcH"/>
+                <outlet property="playButtonTopConstraint" destination="lic-qz-BaW" id="XFG-Mc-GTv"/>
+                <outlet property="playButtonWidthConstraint" destination="cQr-rj-OKv" id="DVY-L9-WTs"/>
+                <outlet property="playImageView" destination="eRU-Wo-PCq" id="S3A-lC-iXh"/>
+                <outlet property="titleLabel" destination="Fle-a5-QYA" id="tvT-cK-3fk"/>
+                <outlet property="titleLabelLeadingConstraint" destination="pkw-1I-Dlf" id="Nmy-8Q-b41"/>
+                <outlet property="titleLabelTopConstraint" destination="297-5d-aM2" id="Gtu-o5-0de"/>
+                <outlet property="titleLabelTrailingConstraint" destination="Pfo-kh-td7" id="xfV-hd-YQ4"/>
+            </connections>
+            <point key="canvasLocation" x="14" y="116"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="add-icon" width="36" height="36"/>
+        <image name="download-arrow" width="36" height="36"/>
+        <image name="play-icon" width="80" height="80"/>
+        <image name="play-icon-shadow" width="80" height="80"/>
+    </resources>
+</document>
