@@ -307,7 +307,11 @@ class MovieDetailsViewController: UIViewController, MultiCollectionViewDelegate,
             let clipItem = mediaItem.clips[indexPath.item]
             PlaybackCoordinator.shared.attemptPlayback(for: clipItem)
         case actorsSection:
-            // TODO: actorsSection
+            if let actorDetailsViewController = UIStoryboard(name: "ActorDetails", bundle: nil).instantiateInitialViewController() as? ActorDetailsViewController {
+                let actorItem = mediaItem.actors[indexPath.item]
+                actorDetailsViewController.actorItem = actorItem
+                navigationController?.pushViewController(actorDetailsViewController, animated: true)
+            }
             break
         case recommendationsSection:
             if let movieDetailsViewController = UIStoryboard(name: "MovieDetails", bundle: nil).instantiateInitialViewController() as? MovieDetailsViewController {
