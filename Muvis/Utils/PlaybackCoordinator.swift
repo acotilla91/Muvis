@@ -92,7 +92,10 @@ class PlaybackCoordinator: NSObject {
                     }
                 }
             }) { [weak self] (_) in
-                self?.presentErrorAlert(for: youtubeItem)
+                DispatchQueue.main.async {
+                    self?.loading = false
+                    self?.presentErrorAlert(for: youtubeItem)
+                }
             }
         }
     }
