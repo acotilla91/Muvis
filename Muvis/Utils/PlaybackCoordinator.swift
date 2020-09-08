@@ -141,14 +141,37 @@ class PlaybackCoordinator: NSObject {
     }
     
     private func presentErrorAlert<T>(for item: T) {
-        let title = "Media stream not found"
-        let message = "Couldn't find the media stream for the selected item. Would you like to try again?"
-        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
-        
+        let alert = UIAlertController(title: "Media stream not found", message: "", preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "Cancel", style: .cancel))
-        alert.addAction(UIAlertAction(title: "Retry", style: .default) { [weak self] (action) in
-            self?.attemptPlayback(for: item)
-        })
+
+        if let mediaItem = item as? YouTubeItem {
+            var preferredYTUrl: URL!
+            var tryActionTitle: String!
+            
+            let ytAppUrl = URL(string: "youtube://\(mediaItem.youtubeId)")!
+            let ytWebUrl = URL(string: "https://www.youtube.com/watch?v=\(mediaItem.youtubeId)")!
+
+            if UIApplication.shared.canOpenURL(ytAppUrl) {
+                tryActionTitle = "Try on App"
+                alert.message = "Couldn't extract the media stream for the selected YouTube item. Would you like to try to open it on the YouTube app?"
+                preferredYTUrl = ytAppUrl
+            }
+            else {
+                tryActionTitle = "Try on Web"
+                alert.message = "Couldn't extract the media stream for the selected YouTube item. Would you like to try to open it on the YouTube website?"
+                preferredYTUrl = ytWebUrl
+            }
+            
+            alert.addAction(UIAlertAction(title: tryActionTitle, style: .default) { (action) in
+                UIApplication.shared.open(preferredYTUrl)
+            })
+        }
+        else {
+            alert.message = "Couldn't find the media stream for the selected item. Would you like to try again?"
+            alert.addAction(UIAlertAction(title: "Retry", style: .default) { [weak self] (action) in
+                self?.attemptPlayback(for: item)
+            })
+        }
         
         UIApplication.topMostViewController()?.present(alert, animated: true)
     }
