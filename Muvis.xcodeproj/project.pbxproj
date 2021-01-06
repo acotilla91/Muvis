@@ -128,6 +128,7 @@
 		1A3A6F02D3AEA6094E61D422 /* Pods-Muvis.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Muvis.release.xcconfig"; path = "Target Support Files/Pods-Muvis/Pods-Muvis.release.xcconfig"; sourceTree = "<group>"; };
 		52467709BE9B68837FC1F397 /* Pods_Muvis.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Muvis.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6B1F07A1C7BFCD7AC49C8CE1 /* Pods-Muvis.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Muvis.debug.xcconfig"; path = "Target Support Files/Pods-Muvis/Pods-Muvis.debug.xcconfig"; sourceTree = "<group>"; };
+		A5D31C1E25A3ADD3002D3AAC /* NameDescribable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameDescribable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -318,6 +319,7 @@
 		0CE3C09C25070C94002D918A /* ACCore */ = {
 			isa = PBXGroup;
 			children = (
+				A5D31C1D25A3ADC2002D3AAC /* Utils */,
 				0CE3C09D25070C94002D918A /* Extensions */,
 				0CE3C0A925070C95002D918A /* Views */,
 			);
@@ -393,6 +395,14 @@
 				52467709BE9B68837FC1F397 /* Pods_Muvis.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A5D31C1D25A3ADC2002D3AAC /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				A5D31C1E25A3ADD3002D3AAC /* NameDescribable.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 		D2810A8179E3B528D5BCB51D /* Pods */ = {
