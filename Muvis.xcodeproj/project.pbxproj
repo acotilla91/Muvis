@@ -13,7 +13,6 @@
 		0C9BCF66250404E400F83EF5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0C9BCF64250404E400F83EF5 /* Main.storyboard */; };
 		0C9BCF68250404E500F83EF5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0C9BCF67250404E500F83EF5 /* Assets.xcassets */; };
 		0C9BCF6B250404E500F83EF5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0C9BCF69250404E500F83EF5 /* LaunchScreen.storyboard */; };
-		0C9BCFA025041EBC00F83EF5 /* NameDescribable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C9BCF9E25041EBC00F83EF5 /* NameDescribable.swift */; };
 		0C9BCFA125041EBC00F83EF5 /* UserScoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C9BCF9F25041EBC00F83EF5 /* UserScoreView.swift */; };
 		0C9BCFA825041F4400F83EF5 /* Nunito-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0C9BCFA425041F4400F83EF5 /* Nunito-Black.ttf */; };
 		0C9BCFA925041F4400F83EF5 /* Nunito-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0C9BCFA525041F4400F83EF5 /* Nunito-Bold.ttf */; };
@@ -64,6 +63,7 @@
 		0CE3C0EB25073F50002D918A /* ActorDetails.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0CE3C0E925073F50002D918A /* ActorDetails.storyboard */; };
 		0CE3C0EC25073F50002D918A /* ActorDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CE3C0EA25073F50002D918A /* ActorDetailsViewController.swift */; };
 		24A52DA2BBAAAFFD9F2AD281 /* Pods_Muvis.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52467709BE9B68837FC1F397 /* Pods_Muvis.framework */; };
+		A56A8E8325A6477B0028468A /* NameDescribable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5D31C1E25A3ADD3002D3AAC /* NameDescribable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -75,7 +75,6 @@
 		0C9BCF67250404E500F83EF5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0C9BCF6A250404E500F83EF5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0C9BCF6C250404E500F83EF5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		0C9BCF9E25041EBC00F83EF5 /* NameDescribable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NameDescribable.swift; sourceTree = "<group>"; };
 		0C9BCF9F25041EBC00F83EF5 /* UserScoreView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserScoreView.swift; sourceTree = "<group>"; };
 		0C9BCFA425041F4400F83EF5 /* Nunito-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-Black.ttf"; sourceTree = "<group>"; };
 		0C9BCFA525041F4400F83EF5 /* Nunito-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-Bold.ttf"; sourceTree = "<group>"; };
@@ -191,7 +190,6 @@
 		0C9BCF9D25041EBC00F83EF5 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
-				0C9BCF9E25041EBC00F83EF5 /* NameDescribable.swift */,
 				0C9BCF9F25041EBC00F83EF5 /* UserScoreView.swift */,
 				0CE3C0E725072EBA002D918A /* PlaybackCoordinator.swift */,
 			);
@@ -549,7 +547,6 @@
 				0CE3C0B425070C95002D918A /* UINavigationController+ACExtensions.swift in Sources */,
 				0C9BCFB32504205E00F83EF5 /* MediaCategory.swift in Sources */,
 				0CE3C0B825070C95002D918A /* ACProgressView.swift in Sources */,
-				0C9BCFA025041EBC00F83EF5 /* NameDescribable.swift in Sources */,
 				0CE3C0B225070C95002D918A /* UIImage+ACExtensions.swift in Sources */,
 				0CE3C0B725070C95002D918A /* ACPaginationView.swift in Sources */,
 				0CE3C0D1250716C3002D918A /* MovieDetailsViewController.swift in Sources */,
@@ -572,6 +569,7 @@
 				0CE3C0B525070C95002D918A /* UIView+ACExtensions.swift in Sources */,
 				0CE3C0B125070C95002D918A /* UIApplication+ACExtensions.swift in Sources */,
 				0CE3C0B025070C95002D918A /* String+ACExtensions.swift in Sources */,
+				A56A8E8325A6477B0028468A /* NameDescribable.swift in Sources */,
 				0CE3C0AC25070C95002D918A /* CGSize+ACExtensions.swift in Sources */,
 				0CE3C0CC25070DD4002D918A /* MediaHeaderView.swift in Sources */,
 				0CE3C07A25070824002D918A /* PaginationFooterView.swift in Sources */,
