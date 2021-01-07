@@ -64,6 +64,9 @@
 		0CE3C0EC25073F50002D918A /* ActorDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CE3C0EA25073F50002D918A /* ActorDetailsViewController.swift */; };
 		24A52DA2BBAAAFFD9F2AD281 /* Pods_Muvis.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52467709BE9B68837FC1F397 /* Pods_Muvis.framework */; };
 		A56A8E8325A6477B0028468A /* NameDescribable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5D31C1E25A3ADD3002D3AAC /* NameDescribable.swift */; };
+		A56A8E9425A74CA60028468A /* MultiCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A56A8E8F25A74CA60028468A /* MultiCollectionView.swift */; };
+		A56A8E9525A74CA60028468A /* MultiCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A56A8E9025A74CA60028468A /* MultiCollectionViewCell.swift */; };
+		A56A8E9625A74CA60028468A /* MultiCollectionViewRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = A56A8E9125A74CA60028468A /* MultiCollectionViewRow.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -127,6 +130,9 @@
 		1A3A6F02D3AEA6094E61D422 /* Pods-Muvis.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Muvis.release.xcconfig"; path = "Target Support Files/Pods-Muvis/Pods-Muvis.release.xcconfig"; sourceTree = "<group>"; };
 		52467709BE9B68837FC1F397 /* Pods_Muvis.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Muvis.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6B1F07A1C7BFCD7AC49C8CE1 /* Pods-Muvis.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Muvis.debug.xcconfig"; path = "Target Support Files/Pods-Muvis/Pods-Muvis.debug.xcconfig"; sourceTree = "<group>"; };
+		A56A8E8F25A74CA60028468A /* MultiCollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultiCollectionView.swift; sourceTree = "<group>"; };
+		A56A8E9025A74CA60028468A /* MultiCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultiCollectionViewCell.swift; sourceTree = "<group>"; };
+		A56A8E9125A74CA60028468A /* MultiCollectionViewRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultiCollectionViewRow.swift; sourceTree = "<group>"; };
 		A5D31C1E25A3ADD3002D3AAC /* NameDescribable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameDescribable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -308,6 +314,7 @@
 		0CE3C07B25070C2D002D918A /* Submodules */ = {
 			isa = PBXGroup;
 			children = (
+				A56A8E8A25A74CA60028468A /* MultiCollectionView */,
 				0CE3C09C25070C94002D918A /* ACCore */,
 			);
 			name = Submodules;
@@ -393,6 +400,25 @@
 				52467709BE9B68837FC1F397 /* Pods_Muvis.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A56A8E8A25A74CA60028468A /* MultiCollectionView */ = {
+			isa = PBXGroup;
+			children = (
+				A56A8E8D25A74CA60028468A /* Classes */,
+			);
+			name = MultiCollectionView;
+			path = MultiCollectionView/MultiCollectionView;
+			sourceTree = "<group>";
+		};
+		A56A8E8D25A74CA60028468A /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				A56A8E8F25A74CA60028468A /* MultiCollectionView.swift */,
+				A56A8E9025A74CA60028468A /* MultiCollectionViewCell.swift */,
+				A56A8E9125A74CA60028468A /* MultiCollectionViewRow.swift */,
+			);
+			path = Classes;
 			sourceTree = "<group>";
 		};
 		A5D31C1D25A3ADC2002D3AAC /* Utils */ = {
@@ -575,7 +601,10 @@
 				0CE3C07A25070824002D918A /* PaginationFooterView.swift in Sources */,
 				0C9BCF61250404E400F83EF5 /* SceneDelegate.swift in Sources */,
 				0CE3C0AF25070C95002D918A /* Int+ACExtensions.swift in Sources */,
+				A56A8E9625A74CA60028468A /* MultiCollectionViewRow.swift in Sources */,
 				0CE3C0B325070C95002D918A /* UIlabel+ACExtensions.swift in Sources */,
+				A56A8E9525A74CA60028468A /* MultiCollectionViewCell.swift in Sources */,
+				A56A8E9425A74CA60028468A /* MultiCollectionView.swift in Sources */,
 				0CE3C0BE25070CBF002D918A /* GradientView.swift in Sources */,
 				0CE3C0E52507179D002D918A /* MediaActionsView.swift in Sources */,
 				0CE3C0B625070C95002D918A /* URLSession+ACExtensions.swift in Sources */,

@@ -8,7 +8,6 @@
 
 import UIKit
 import NVActivityIndicatorView
-import MultiCollectionView
 import Nuke
 
 class HomeViewController: UIViewController, MultiCollectionViewDelegate, ACPaginationViewDelegate {

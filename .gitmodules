@@ -1,3 +1,6 @@
 [submodule "Muvis/Dependencies/Submodules/ACCore"]
 	path = Muvis/Dependencies/Submodules/ACCore
 	url = git@github.com:acotilla91/ACCore.git
+[submodule "Muvis/Dependencies/Submodules/MultiCollectionView"]
+	path = Muvis/Dependencies/Submodules/MultiCollectionView
+	url = git@github.com:acotilla91/MultiCollectionView.git

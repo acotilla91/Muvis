@@ -8,7 +8,6 @@ target 'Muvis' do
     pod 'NVActivityIndicatorView'
     pod 'UICircularProgressRing'
     pod 'ACAnimator'
-    pod 'MultiCollectionView'
     pod 'YoutubeDirectLinkExtractor'
     pod 'ShowTime'
 end
