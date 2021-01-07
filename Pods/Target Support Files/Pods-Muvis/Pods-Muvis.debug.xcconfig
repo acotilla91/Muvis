@@ -1,12 +1,14 @@
 ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES
-FRAMEWORK_SEARCH_PATHS = $(inherited) "${PODS_CONFIGURATION_BUILD_DIR}/ACAnimator" "${PODS_CONFIGURATION_BUILD_DIR}/MultiCollectionView" "${PODS_CONFIGURATION_BUILD_DIR}/NVActivityIndicatorView" "${PODS_CONFIGURATION_BUILD_DIR}/Nuke" "${PODS_CONFIGURATION_BUILD_DIR}/ShowTime" "${PODS_CONFIGURATION_BUILD_DIR}/SwiftDate" "${PODS_CONFIGURATION_BUILD_DIR}/UICircularProgressRing" "${PODS_CONFIGURATION_BUILD_DIR}/YoutubeDirectLinkExtractor"
+CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = NO
+FRAMEWORK_SEARCH_PATHS = $(inherited) "${PODS_CONFIGURATION_BUILD_DIR}/ACAnimator" "${PODS_CONFIGURATION_BUILD_DIR}/NVActivityIndicatorView" "${PODS_CONFIGURATION_BUILD_DIR}/Nuke" "${PODS_CONFIGURATION_BUILD_DIR}/ShowTime" "${PODS_CONFIGURATION_BUILD_DIR}/SwiftDate" "${PODS_CONFIGURATION_BUILD_DIR}/UICircularProgressRing"
 GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
-HEADER_SEARCH_PATHS = $(inherited) "${PODS_CONFIGURATION_BUILD_DIR}/ACAnimator/ACAnimator.framework/Headers" "${PODS_CONFIGURATION_BUILD_DIR}/MultiCollectionView/MultiCollectionView.framework/Headers" "${PODS_CONFIGURATION_BUILD_DIR}/NVActivityIndicatorView/NVActivityIndicatorView.framework/Headers" "${PODS_CONFIGURATION_BUILD_DIR}/Nuke/Nuke.framework/Headers" "${PODS_CONFIGURATION_BUILD_DIR}/ShowTime/ShowTime.framework/Headers" "${PODS_CONFIGURATION_BUILD_DIR}/SwiftDate/SwiftDate.framework/Headers" "${PODS_CONFIGURATION_BUILD_DIR}/UICircularProgressRing/UICircularProgressRing.framework/Headers" "${PODS_CONFIGURATION_BUILD_DIR}/YoutubeDirectLinkExtractor/YoutubeDirectLinkExtractor.framework/Headers"
+HEADER_SEARCH_PATHS = $(inherited) "${PODS_CONFIGURATION_BUILD_DIR}/ACAnimator/ACAnimator.framework/Headers" "${PODS_CONFIGURATION_BUILD_DIR}/NVActivityIndicatorView/NVActivityIndicatorView.framework/Headers" "${PODS_CONFIGURATION_BUILD_DIR}/Nuke/Nuke.framework/Headers" "${PODS_CONFIGURATION_BUILD_DIR}/ShowTime/ShowTime.framework/Headers" "${PODS_CONFIGURATION_BUILD_DIR}/SwiftDate/SwiftDate.framework/Headers" "${PODS_CONFIGURATION_BUILD_DIR}/UICircularProgressRing/UICircularProgressRing.framework/Headers"
 LD_RUNPATH_SEARCH_PATHS = $(inherited) '@executable_path/Frameworks' '@loader_path/Frameworks'
-OTHER_LDFLAGS = $(inherited) -framework "ACAnimator" -framework "AVFoundation" -framework "Foundation" -framework "MultiCollectionView" -framework "NVActivityIndicatorView" -framework "Nuke" -framework "QuartzCore" -framework "ShowTime" -framework "SwiftDate" -framework "UICircularProgressRing" -framework "UIKit" -framework "YoutubeDirectLinkExtractor"
+OTHER_LDFLAGS = $(inherited) -framework "ACAnimator" -framework "Foundation" -framework "NVActivityIndicatorView" -framework "Nuke" -framework "QuartzCore" -framework "ShowTime" -framework "SwiftDate" -framework "UICircularProgressRing" -framework "UIKit"
 OTHER_SWIFT_FLAGS = $(inherited) -D COCOAPODS
 PODS_BUILD_DIR = ${BUILD_DIR}
 PODS_CONFIGURATION_BUILD_DIR = ${PODS_BUILD_DIR}/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)
 PODS_PODFILE_DIR_PATH = ${SRCROOT}/.
 PODS_ROOT = ${SRCROOT}/Pods
+PODS_XCFRAMEWORKS_BUILD_DIR = $(PODS_CONFIGURATION_BUILD_DIR)/XCFrameworkIntermediates
 USE_RECURSIVE_SCRIPT_INPUTS_IN_SCRIPT_PHASES = YES
