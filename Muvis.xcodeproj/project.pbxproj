@@ -202,7 +202,8 @@
 				0CE3C0B925070CBF002D918A /* Snapshots */,
 				0CE3C07B25070C2D002D918A /* Submodules */,
 			);
-			path = Dependencies;
+			name = Dependencies;
+			path = Muvis/Dependencies;
 			sourceTree = SOURCE_ROOT;
 		};
 		0C9BCF9D25041EBC00F83EF5 /* Utils */ = {
