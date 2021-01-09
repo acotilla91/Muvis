@@ -73,6 +73,8 @@
 		A56A8EB025A752EE0028468A /* ExtractionSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = A56A8EA925A752EE0028468A /* ExtractionSource.swift */; };
 		A56A8EB125A752EE0028468A /* VideoInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = A56A8EAA25A752EE0028468A /* VideoInfo.swift */; };
 		A56A8EB225A752EE0028468A /* YoutubeDirectLinkExtractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A56A8EAB25A752EE0028468A /* YoutubeDirectLinkExtractor.swift */; };
+		A5A2722625A94E4500D7C8C6 /* .gitkeep in Resources */ = {isa = PBXBuildFile; fileRef = A5A2722325A94E4500D7C8C6 /* .gitkeep */; };
+		A5A2722725A94E4500D7C8C6 /* ACAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5A2722425A94E4500D7C8C6 /* ACAnimator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -145,6 +147,8 @@
 		A56A8EA925A752EE0028468A /* ExtractionSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtractionSource.swift; sourceTree = "<group>"; };
 		A56A8EAA25A752EE0028468A /* VideoInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoInfo.swift; sourceTree = "<group>"; };
 		A56A8EAB25A752EE0028468A /* YoutubeDirectLinkExtractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YoutubeDirectLinkExtractor.swift; sourceTree = "<group>"; };
+		A5A2722325A94E4500D7C8C6 /* .gitkeep */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
+		A5A2722425A94E4500D7C8C6 /* ACAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ACAnimator.swift; sourceTree = "<group>"; };
 		A5D31C1E25A3ADD3002D3AAC /* NameDescribable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameDescribable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -327,6 +331,7 @@
 		0CE3C07B25070C2D002D918A /* Submodules */ = {
 			isa = PBXGroup;
 			children = (
+				A5A2721F25A94E4500D7C8C6 /* ACAnimator */,
 				A56A8E8A25A74CA60028468A /* MultiCollectionView */,
 				0CE3C09C25070C94002D918A /* ACCore */,
 			);
@@ -464,6 +469,24 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		A5A2721F25A94E4500D7C8C6 /* ACAnimator */ = {
+			isa = PBXGroup;
+			children = (
+				A5A2722225A94E4500D7C8C6 /* Classes */,
+			);
+			name = ACAnimator;
+			path = ACAnimator/ACAnimator;
+			sourceTree = "<group>";
+		};
+		A5A2722225A94E4500D7C8C6 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				A5A2722325A94E4500D7C8C6 /* .gitkeep */,
+				A5A2722425A94E4500D7C8C6 /* ACAnimator.swift */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
 		A5D31C1D25A3ADC2002D3AAC /* Utils */ = {
 			isa = PBXGroup;
 			children = (
@@ -547,6 +570,7 @@
 				0C9BCF6B250404E500F83EF5 /* LaunchScreen.storyboard in Resources */,
 				0C9BCFA825041F4400F83EF5 /* Nunito-Black.ttf in Resources */,
 				0CE3C0EB25073F50002D918A /* ActorDetails.storyboard in Resources */,
+				A5A2722625A94E4500D7C8C6 /* .gitkeep in Resources */,
 				0CE3C0E62507179D002D918A /* MediaActionsView.xib in Resources */,
 				0CE3C0CD25070DD4002D918A /* MediaHeaderView.xib in Resources */,
 				0CE3C0E125071770002D918A /* MovieMetadataCellView.xib in Resources */,
@@ -621,6 +645,7 @@
 				0CE3C0B725070C95002D918A /* ACPaginationView.swift in Sources */,
 				0CE3C0D1250716C3002D918A /* MovieDetailsViewController.swift in Sources */,
 				A56A8EB125A752EE0028468A /* VideoInfo.swift in Sources */,
+				A5A2722725A94E4500D7C8C6 /* ACAnimator.swift in Sources */,
 				0C9BCF63250404E400F83EF5 /* HomeViewController.swift in Sources */,
 				0C9BCFB22504205E00F83EF5 /* ActorItem.swift in Sources */,
 				0CE3C0DC25071770002D918A /* MediaDescriptionCellView.swift in Sources */,

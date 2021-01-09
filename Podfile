@@ -1,5 +1,5 @@
 source 'https://github.com/CocoaPods/Specs.git'
-platform :ios, '11.0'
+platform :ios, '14.0'
 use_frameworks!
 
 target 'Muvis' do
@@ -7,6 +7,5 @@ target 'Muvis' do
     pod 'Nuke'
     pod 'NVActivityIndicatorView'
     pod 'UICircularProgressRing'
-    pod 'ACAnimator'
     pod 'ShowTime'
 end

@@ -10,7 +10,6 @@ import UIKit
 
 import Nuke
 import UICircularProgressRing
-import ACAnimator
 
 class MovieDetailsViewController: UIViewController, MultiCollectionViewDelegate, MediaActionsViewDelegate {
 

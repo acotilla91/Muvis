@@ -8,7 +8,6 @@
 
 import UIKit
 import Nuke
-import ACAnimator
 
 class ActorDetailsViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
 
