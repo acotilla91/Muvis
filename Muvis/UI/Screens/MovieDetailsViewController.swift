@@ -460,7 +460,7 @@ class MovieDetailsViewController: UIViewController, MultiCollectionViewDelegate,
             // https://www.physicsclassroom.com/class/1DKin/Lesson-6/Kinematic-Equations
             let pointsPerSecond: CGFloat = 400.0
             var duration: CGFloat = (abs(displacement) * 2.0) / pointsPerSecond
-            if duration > 0.8 { duration = 0.8 } // Cap the duration at 0.8s
+            if duration > 0.5 { duration = 0.5 } // Cap the duration at 0.5s
             
             // Start animation
             offsetAnimator = ACAnimator(duration: CFTimeInterval(duration), easeFunction: .cubicOut, animation: { (fraction, _, _) in
