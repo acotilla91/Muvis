@@ -31,7 +31,6 @@ class PlaybackCoordinator: NSObject {
         NotificationCenter.default.addObserver(self, selector: #selector(playerViewControllerDidDisappear), name: .kAVPlayerViewControllerDidDisappearNotification, object: nil)
     }
     
-    private var playbackObserverToken: Any?
     private var currentPlayer: AVPlayer?
 
     private var loading = false {
@@ -176,11 +175,6 @@ class PlaybackCoordinator: NSObject {
     }
     
     @objc private func playerViewControllerDidDisappear() {
-        if let token = playbackObserverToken {
-            currentPlayer?.removeTimeObserver(token)
-            playbackObserverToken = nil
-        }
-        
         currentPlayer?.pause()
         currentPlayer = nil
     }
