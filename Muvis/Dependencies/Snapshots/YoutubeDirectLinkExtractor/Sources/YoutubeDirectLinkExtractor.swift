@@ -37,7 +37,7 @@ public class YoutubeDirectLinkExtractor {
             }
             
             guard info.count > 0 else {
-                failure(Error.unkown)
+                failure(YoutubeError.unkown)
                 return
             }
             
@@ -51,12 +51,12 @@ public class YoutubeDirectLinkExtractor {
                         completion: @escaping ([[String: String]], Swift.Error?) -> Void) {
         
         guard let id = source.videoId else {
-            completion([], Error.cantExtractVideoId)
+            completion([], YoutubeError.cantExtractVideoId)
             return
         }
         
         guard let infoUrl = URL(string: "\(infoBasePrefix)\(id)") else {
-            completion([], Error.cantConstructRequestUrl)
+            completion([], YoutubeError.cantConstructRequestUrl)
             return
         }
         
@@ -67,12 +67,12 @@ public class YoutubeDirectLinkExtractor {
         session.dataTask(with: r as URLRequest) { data, response, error in
 
             guard let data = data else {
-                completion([], error ?? Error.noDataInResponse)
+                completion([], error ?? YoutubeError.noDataInResponse)
                 return
             }
             
             guard let dataString = String(data: data, encoding: .utf8) else {
-                completion([], Error.cantConvertDataToString)
+                completion([], YoutubeError.cantConvertDataToString)
                 return
             }
             
@@ -86,15 +86,17 @@ public class YoutubeDirectLinkExtractor {
         let pairs = string.queryComponents()
         
         guard let playerResponse = pairs["player_response"], !playerResponse.isEmpty else {
-            let error = YoutubeError(errorDescription: pairs["reason"])
-            return ([], error ?? Error.cantExtractURLFromYoutubeResponse)
+            guard let errorReason = pairs["reason"], !errorReason.isEmpty else {
+                return ([], YoutubeError.cantExtractURLFromYoutubeResponse)
+            }
+            return ([], YoutubeError.custom(description: errorReason))
         }
         
         guard let playerResponseData = playerResponse.data(using: .utf8),
         let playerResponseJSON = (try? JSONSerialization.jsonObject(with: playerResponseData, options: [])) as? [String: Any],
         let streamingData = playerResponseJSON["streamingData"] as? [String: Any],
         let formats = streamingData["formats"] as? [[String: Any]] else {
-            return ([], Error.cantExtractURLFromYoutubeResponse)
+            return ([], YoutubeError.cantExtractURLFromYoutubeResponse)
         }
         
         let arrayUrls: [[String: String]] = formats

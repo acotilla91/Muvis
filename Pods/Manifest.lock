@@ -1,46 +1,34 @@
 PODS:
-  - ACAnimator (1.0.1)
-  - MultiCollectionView (1.0.2)
-  - Nuke (8.4.1)
-  - NVActivityIndicatorView (5.0.0):
-    - NVActivityIndicatorView/Base (= 5.0.0)
-  - NVActivityIndicatorView/Base (5.0.0)
+  - Nuke (9.2.3)
+  - NVActivityIndicatorView (5.1.1):
+    - NVActivityIndicatorView/Base (= 5.1.1)
+  - NVActivityIndicatorView/Base (5.1.1)
   - ShowTime (2.5.2)
-  - SwiftDate (6.1.0)
+  - SwiftDate (6.3.1)
   - UICircularProgressRing (7.0.0)
-  - YoutubeDirectLinkExtractor (0.3.1)
 
 DEPENDENCIES:
-  - ACAnimator
-  - MultiCollectionView
   - Nuke
   - NVActivityIndicatorView
   - ShowTime
   - SwiftDate
   - UICircularProgressRing
-  - YoutubeDirectLinkExtractor
 
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
-    - ACAnimator
-    - MultiCollectionView
     - Nuke
     - NVActivityIndicatorView
     - ShowTime
     - SwiftDate
     - UICircularProgressRing
-    - YoutubeDirectLinkExtractor
 
 SPEC CHECKSUMS:
-  ACAnimator: 5ebdf39455b2e1838746964fe01766876086bcbe
-  MultiCollectionView: 36b6a104d622324692c46bddb144788b017e99f8
-  Nuke: d780e3507a86b86c589ab3cc5cd302d5456f06fb
-  NVActivityIndicatorView: f109ed069924ac1b4adbc1ae9cfaeac0be1d6c2c
+  Nuke: 3dd19fd03612c179036d2af7f56ec57cb84144e2
+  NVActivityIndicatorView: 1f6c5687f1171810aa27a3296814dc2d7dec3667
   ShowTime: 5cb2c5314da2983cec44f27123a15473cf29306f
-  SwiftDate: fa2bb3962056bb44047b4b85a30044e5eae30b03
+  SwiftDate: 72d28954e8e1c6c1c0f917ccc8005e4f83c7d4b2
   UICircularProgressRing: 738b48db0ec1fbbd8482d727979392bb8c272e8d
-  YoutubeDirectLinkExtractor: de7abd36c0e3bb120b9b372f36450fbf9b51c01e
 
-PODFILE CHECKSUM: d5bfe0a571c22cd0b7bc26332f45a964466c137d
+PODFILE CHECKSUM: f38f1dde206b972d19f80c517e200a5ff4fbfecc
 
-COCOAPODS: 1.8.4
+COCOAPODS: 1.10.0

@@ -11,7 +11,6 @@ import AVFoundation
 import AVKit
 
 import NVActivityIndicatorView
-import YoutubeDirectLinkExtractor
 
 extension Notification.Name {
     static let kAVPlayerViewControllerDidDisappearNotification = Notification.Name.init("kAVPlayerViewControllerDidDisappearNotification")

@@ -10,13 +10,12 @@ import UIKit
 
 import Nuke
 import UICircularProgressRing
-import ACAnimator
-import MultiCollectionView
 
 class MovieDetailsViewController: UIViewController, MultiCollectionViewDelegate, MediaActionsViewDelegate {
 
     weak var mediaItem: MediaItem!
 
+    private var ignoreSubviewsLayoutUpdates: Bool = false
     private var initialCollectionViewOffset: CGPoint!
     private var offsetAnimator: ACAnimator?
 
@@ -146,7 +145,11 @@ class MovieDetailsViewController: UIViewController, MultiCollectionViewDelegate,
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-
+        
+        guard !ignoreSubviewsLayoutUpdates else {
+            return
+        }
+        
         updateMediaActionsViewFrame()
         updateCollectionViewInset()
     }
@@ -393,6 +396,10 @@ class MovieDetailsViewController: UIViewController, MultiCollectionViewDelegate,
             return
         }
         
+        // After the user interacts with the app, any call to `viewDidLayoutSubviews` must be ignored since those
+        // will be triggered by the user interaction not by the initial views layout.
+        ignoreSubviewsLayoutUpdates = true
+                
         // Stop the offset animation if the user starts dragging the collection view
         if collectionView.isTracking {
             offsetAnimator?.stop()
@@ -462,7 +469,7 @@ class MovieDetailsViewController: UIViewController, MultiCollectionViewDelegate,
             // https://www.physicsclassroom.com/class/1DKin/Lesson-6/Kinematic-Equations
             let pointsPerSecond: CGFloat = 400.0
             var duration: CGFloat = (abs(displacement) * 2.0) / pointsPerSecond
-            if duration > 0.8 { duration = 0.8 } // Cap the duration at 0.8s
+            if duration > 0.5 { duration = 0.5 } // Cap the duration at 0.5s
             
             // Start animation
             offsetAnimator = ACAnimator(duration: CFTimeInterval(duration), easeFunction: .cubicOut, animation: { (fraction, _, _) in
