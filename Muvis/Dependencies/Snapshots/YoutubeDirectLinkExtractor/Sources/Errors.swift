@@ -8,27 +8,32 @@
 
 import Foundation
 
-enum Error: String, LocalizedError {
-    case cantExtractVideoId = "Couldn't extract video id from the url"
-    case cantConstructRequestUrl = "Couldn't construct URL for youtube info request"
-    case noDataInResponse = "No data in youtube info response"
-    case cantConvertDataToString = "Couldn't convert response data to string"
-    case cantExtractURLFromYoutubeResponse = "Couldn't extract url from youtube response"
-    case unkown = "Unknown error occured"
+enum YoutubeError: LocalizedError {
+    
+    case cantExtractVideoId
+    case cantConstructRequestUrl
+    case noDataInResponse
+    case cantConvertDataToString
+    case cantExtractURLFromYoutubeResponse
+    case unkown
+    case custom(description: String?)
     
     var errorDescription: String? {
-        return self.rawValue
-    }
-}
-
-struct YoutubeError: LocalizedError {
-    var errorDescription: String?
-    
-    init?(errorDescription: String?) {
-        guard let errorDescription = errorDescription else {
-            return nil
+        switch self {
+        case .custom(let description):
+            return description
+        case .cantExtractVideoId:
+            return "Couldn't extract video id from the url"
+        case .cantConstructRequestUrl:
+            return "Couldn't construct URL for youtube info request"
+        case .noDataInResponse:
+            return "No data in youtube info response"
+        case .cantConvertDataToString:
+            return "Couldn't convert response data to string"
+        case .cantExtractURLFromYoutubeResponse:
+            return "Couldn't extract url from youtube response"
+        case .unkown:
+            return "Unknown error occured"
         }
-        
-        self.errorDescription = errorDescription
     }
 }
