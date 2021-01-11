@@ -8,6 +8,7 @@
 
 import UIKit
 import ShowTime
+import AVKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -15,6 +16,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         // Enable 'ShowTime' (by commenting line below) if demo recording necessary
         ShowTime.enabled = .never
+        
+        // Enable background audio to allow for PiP
+        let audioSession = AVAudioSession.sharedInstance()
+        try? audioSession.setCategory(.playback)
         
         return true
     }
