@@ -1,10 +1,10 @@
 PODS:
-  - Nuke (8.4.1)
-  - NVActivityIndicatorView (5.0.0):
-    - NVActivityIndicatorView/Base (= 5.0.0)
-  - NVActivityIndicatorView/Base (5.0.0)
+  - Nuke (9.2.3)
+  - NVActivityIndicatorView (5.1.1):
+    - NVActivityIndicatorView/Base (= 5.1.1)
+  - NVActivityIndicatorView/Base (5.1.1)
   - ShowTime (2.5.2)
-  - SwiftDate (6.1.0)
+  - SwiftDate (6.3.1)
   - UICircularProgressRing (7.0.0)
 
 DEPENDENCIES:
@@ -23,10 +23,10 @@ SPEC REPOS:
     - UICircularProgressRing
 
 SPEC CHECKSUMS:
-  Nuke: d780e3507a86b86c589ab3cc5cd302d5456f06fb
-  NVActivityIndicatorView: f109ed069924ac1b4adbc1ae9cfaeac0be1d6c2c
+  Nuke: 3dd19fd03612c179036d2af7f56ec57cb84144e2
+  NVActivityIndicatorView: 1f6c5687f1171810aa27a3296814dc2d7dec3667
   ShowTime: 5cb2c5314da2983cec44f27123a15473cf29306f
-  SwiftDate: fa2bb3962056bb44047b4b85a30044e5eae30b03
+  SwiftDate: 72d28954e8e1c6c1c0f917ccc8005e4f83c7d4b2
   UICircularProgressRing: 738b48db0ec1fbbd8482d727979392bb8c272e8d
 
 PODFILE CHECKSUM: f38f1dde206b972d19f80c517e200a5ff4fbfecc
