@@ -8,6 +8,7 @@
 
 import UIKit
 import ShowTime
+import AVKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -15,6 +16,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         // Enable 'ShowTime' (by commenting line below) if demo recording necessary
         ShowTime.enabled = .never
+        
+        // Enable background audio to allow for PiP (do not set active right away as it'll stop any current app playback)
+        try? AVAudioSession.sharedInstance().setCategory(.playback, mode: .moviePlayback)
         
         return true
     }

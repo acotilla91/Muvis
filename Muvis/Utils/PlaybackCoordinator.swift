@@ -21,9 +21,19 @@ extension AVPlayerViewController {
         super.viewDidDisappear(animated)
         NotificationCenter.default.post(name: .kAVPlayerViewControllerDidDisappearNotification, object: nil)
     }
+    
+    open var isPlaying: Bool {
+        return self.player?.rate != 0 && self.player?.error == nil
+    }
 }
 
-class PlaybackCoordinator: NSObject {
+enum PlaybackMode {
+    case idle
+    case playing
+    case pip
+}
+
+class PlaybackCoordinator: NSObject, AVPlayerViewControllerDelegate {
 
     static let shared = PlaybackCoordinator()
     private override init() {
@@ -31,14 +41,16 @@ class PlaybackCoordinator: NSObject {
         NotificationCenter.default.addObserver(self, selector: #selector(playerViewControllerDidDisappear), name: .kAVPlayerViewControllerDidDisappearNotification, object: nil)
     }
     
-    private var playbackObserverToken: Any?
     private var currentPlayer: AVPlayer?
+    private var currentPlayerController: AVPlayerViewController!
 
     private var loading = false {
         didSet {
             loading ? displayLoadingView() : dismissLoadingView()
         }
     }
+    
+    private(set) var playbackMode: PlaybackMode = .idle
     
     private var activityIndicator: NVActivityIndicatorView!
     
@@ -64,10 +76,37 @@ class PlaybackCoordinator: NSObject {
         return YoutubeDirectLinkExtractor()
     }()
     
+    // MARK: - Playback & Preparation -
+    
+    private func displayLoadingView() {
+        loadingView.removeFromSuperview()
+        UIApplication.shared.firstKeyWindow?.addSubview(loadingView)
+        
+        activityIndicator.startAnimating()
+
+        UIView.animate(withDuration: 0.3) {
+            self.loadingView.alpha = 1.0
+        }
+    }
+    
+    private func dismissLoadingView() {
+        self.activityIndicator.stopAnimating()
+
+        UIView.animate(withDuration: 0.3, animations: {
+            self.loadingView.alpha = 0.0
+        }) { (finished) in
+            self.loadingView.removeFromSuperview()
+        }
+    }
+    
     func attemptPlayback<T>(for item: T) {
         guard !loading else {
-            print("attemptPlayback() - ERROR: Already attenpting playback.")
+            print("attemptPlayback() - ERROR: Already attempting playback.")
             return
+        }
+        
+        if playbackMode == .pip {
+            resetPlaybackSession()
         }
         
         if let mediaItem = item as? MediaItem {
@@ -99,27 +138,6 @@ class PlaybackCoordinator: NSObject {
         }
     }
     
-    private func displayLoadingView() {
-        loadingView.removeFromSuperview()
-        UIApplication.shared.firstKeyWindow?.addSubview(loadingView)
-        
-        activityIndicator.startAnimating()
-
-        UIView.animate(withDuration: 0.3) {
-            self.loadingView.alpha = 1.0
-        }
-    }
-    
-    private func dismissLoadingView() {
-        self.activityIndicator.stopAnimating()
-
-        UIView.animate(withDuration: 0.3, animations: {
-            self.loadingView.alpha = 0.0
-        }) { (finished) in
-            self.loadingView.removeFromSuperview()
-        }
-    }
-    
     private func play(url: URL, with headers: [String: String] = [:], mediaItem: MediaItem? = nil) {
         var assetOptions: [String: [String: Any]] = [:]
         if !headers.isEmpty {
@@ -132,13 +150,30 @@ class PlaybackCoordinator: NSObject {
         let item = AVPlayerItem(asset: asset)
         currentPlayer = AVPlayer(playerItem: item)
         
-        let playerViewController = AVPlayerViewController()
-        playerViewController.player = currentPlayer
-        UIApplication.topMostViewController()?.present(playerViewController, animated: true) {
-            playerViewController.player?.play()
+        currentPlayerController = AVPlayerViewController()
+        currentPlayerController.delegate = self
+        currentPlayerController.player = currentPlayer
+
+        UIApplication.topMostViewController()?.present(currentPlayerController, animated: true) {
+            self.currentPlayerController.player?.play()
+            self.playbackMode = .playing
         }
     }
     
+    func resetPlaybackSession() {
+        currentPlayer?.pause()
+        currentPlayer = nil
+
+        currentPlayerController.player = nil
+        currentPlayerController.dismiss(animated: false)
+        currentPlayerController.delegate = nil
+        currentPlayerController = nil
+        
+        playbackMode = .idle
+    }
+    
+    // MARK: - Error Handling -
+
     private func presentErrorAlert<T>(for item: T) {
         let alert = UIAlertController(title: "Media stream not found", message: "", preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "Cancel", style: .cancel))
@@ -175,13 +210,31 @@ class PlaybackCoordinator: NSObject {
         UIApplication.topMostViewController()?.present(alert, animated: true)
     }
     
+    // MARK: - AVPlayerViewController Callbacks -
+    
     @objc private func playerViewControllerDidDisappear() {
-        if let token = playbackObserverToken {
-            currentPlayer?.removeTimeObserver(token)
-            playbackObserverToken = nil
+        if playbackMode == .playing {
+            resetPlaybackSession()
         }
-        
-        currentPlayer?.pause()
-        currentPlayer = nil
+    }
+    
+    func playerViewControllerDidStartPictureInPicture(_ playerViewController: AVPlayerViewController) {
+        playbackMode = .pip
+    }
+    
+    func playerViewControllerDidStopPictureInPicture(_ playerViewController: AVPlayerViewController) {
+        if !playerViewController.isPlaying {
+            resetPlaybackSession()
+        }
+    }
+    
+    func playerViewController(_ playerViewController: AVPlayerViewController, restoreUserInterfaceForPictureInPictureStopWithCompletionHandler completionHandler: @escaping (Bool) -> Void) {
+        if playerViewController.isPlaying {
+            UIApplication.topMostViewController()?.present(playerViewController, animated: true) {
+                completionHandler(true)
+                
+                self.playbackMode = .playing
+            }
+        }
     }
 }
